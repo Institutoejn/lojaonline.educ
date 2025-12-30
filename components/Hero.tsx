@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         {/* Left Side: Text Content */}
         <div className="space-y-8 text-center md:text-left">
           <div className="inline-block px-4 py-1.5 rounded-full bg-[#E0D7FF] text-[#9C89FF] font-bold text-xs uppercase tracking-widest animate-bounce">
-            Educação com Amor ✨
+            Educação com Amor
           </div>
           
           <h2 className="text-4xl lg:text-6xl font-extrabold text-[#4A4A4A] leading-[1.1]">
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
               </svg>
             </button>
             <button className="bubble-button w-full sm:w-auto px-8 py-4 bg-white border-2 border-[#E0D7FF] text-[#9C89FF] rounded-full font-bold text-lg">
-              Material Grátis 🎁
+              Material Grátis
             </button>
           </div>
           

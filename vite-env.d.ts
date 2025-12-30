@@ -49,7 +49,9 @@ interface ImportMetaEnv {
   readonly SSR: boolean;
 }
 
+// Fixed: Removed the conflicting 'url' property declaration. 
+// Standard TypeScript definitions (from lib.es2020.meta) already include 'url: string'.
+// Adding 'readonly' here caused a modifier mismatch error.
 interface ImportMeta {
-  readonly url: string;
   readonly env: ImportMetaEnv;
 }
