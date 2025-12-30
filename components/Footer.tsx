@@ -2,6 +2,8 @@
 import React from 'react';
 
 const Footer: React.FC = () => {
+  const avatarUrl = "https://lh3.googleusercontent.com/d/1XbOyIiZKOStTs_tLibLGbl3TtQCA-q_c";
+
   return (
     <footer className="bg-[#F3F0FF] pt-20 pb-10 px-6 rounded-t-[60px]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 border-b border-[#E0D7FF] pb-16">
@@ -48,11 +50,19 @@ const Footer: React.FC = () => {
 
         {/* Owner Avatar Section */}
         <div className="bg-white/50 backdrop-blur rounded-[40px] p-6 flex flex-col items-center text-center space-y-4">
-          <div className="w-20 h-20 rounded-full bg-[#FFD1DC] border-4 border-white overflow-hidden">
-            <img src="https://picsum.photos/seed/owner/200/200" alt="Owner" className="w-full h-full object-cover" />
+          <div className="w-20 h-20 rounded-full bg-[#FFD1DC] border-4 border-white overflow-hidden shadow-sm">
+            <img 
+              src={avatarUrl} 
+              alt="Pollyana - Fundadora da EDUC" 
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = "https://api.dicebear.com/7.x/bottts-neutral/svg?seed=Pollyana";
+              }}
+            />
           </div>
           <div>
-            <h5 className="font-bold text-[#4A4A4A]">Olá, eu sou a [Nome]</h5>
+            <h5 className="font-bold text-[#4A4A4A]">Olá, eu sou a Pollyana</h5>
             <p className="text-xs text-gray-400 font-medium">Fundadora da EDUC</p>
           </div>
           <p className="text-[10px] text-gray-500">"Educar é tocar a alma e plantar sementes de futuro."</p>
